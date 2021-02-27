@@ -1,10 +1,10 @@
 package com.company;
 
 public class Piece {
-    private Integer color;
+    private String name;
+    private boolean white;
     private String type;
-    private Integer status;     // Se a peça já foi comida (1 se já foi comido)
-    private Integer maneuver;   // Tipo de movimentação
+    private boolean killed;
 
     // 1. movimentação torre
     // 2. movimentação cavalo
@@ -12,27 +12,27 @@ public class Piece {
     // 4. movimentação rainha
     // 5. movimentação rei
 
-    public Piece(Integer color, String type, Integer maneuver){
-        this.color = color;
+    public Piece(String name, boolean white, String type){
+        this.name = name;
+        this.white = white;
         this.type = type;
-        this.status = 1;
-        this.maneuver = maneuver;
+        this.killed = false;
     }
 
-    public Integer getColor() {
-        return color;
+    public boolean getColor() {
+        return white;
     }
 
-    public void setColor(Integer color) {
-        this.color = color;
+    public void setColor(boolean white) {
+        this.white = white;
     }
 
-    public Integer getStatus() {
-        return status;
+    public boolean getStatus() {
+        return killed;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setStatus(boolean killed) {
+        this.killed = killed;
     }
 
     public String getType() {
@@ -43,13 +43,8 @@ public class Piece {
         this.type = type;
     }
 
-
-    public Integer getManeuver() {
-        return maneuver;
-    }
-
-    public void setManeuver(Integer maneuver) {
-        this.maneuver = maneuver;
+    public String getName() {
+        return name;
     }
 }
 
