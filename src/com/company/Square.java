@@ -1,8 +1,13 @@
 package com.company;
 
 public class Square {
-    private String position = "A0";
-    private String color = "black";
+    private String position;
+    private String color;
+
+    public Square(String position, String color){
+        this.position = position;
+        this.color = color;
+    }
 
     public void setPosition(String pos){
         this.position = pos;
